@@ -1,6 +1,6 @@
 # babel-test
 
-##Installation
+## Installation
 
 - While you can install Babel CLI globally on your machine, it's much better to install it locally project by project.
 
@@ -14,7 +14,7 @@
 
 npm install --save-dev @babel/core @babel/cli
 
-Copy
+
 Note: If you do not have a package.json, create one before installing. This will ensure proper interaction with the npx command.
 
 After that finishes installing, your package.json file should include:
@@ -26,7 +26,7 @@ After that finishes installing, your package.json file should include:
   }
 }
 
-Copy
+
 3Usage
 Instead of running Babel directly from the command line we're going to put our commands in npm scripts which will use our local version.
 
@@ -43,8 +43,8 @@ Simply add a "scripts" field to your package.json and put the babel command insi
     }
   }
 
-Copy
-Now from our terminal we can run:
+
+- Now from our terminal we can run:
 
 npm run build
 
