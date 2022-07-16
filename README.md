@@ -1,4 +1,5 @@
 # babel-test
+
 ##Installation
 
 - While you can install Babel CLI globally on your machine, it's much better to install it locally project by project.
@@ -6,7 +7,9 @@
 - There are two primary reasons for this.
 
 1-Different projects on the same machine can depend on different versions of Babel allowing you to update one at a time.
+
 2-It means you do not have an implicit dependency on the environment you are working in. Making your project far more portable and easier to setup.
+
 - We can install Babel CLI locally by running:
 
 npm install --save-dev @babel/core @babel/cli
