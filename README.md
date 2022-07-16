@@ -17,23 +17,27 @@ npm install --save-dev @babel/core @babel/cli
 ```
 
 
-Note: If you do not have a package.json, create one before installing. This will ensure proper interaction with the npx command.
+- Note: If you do not have a package.json, create one before installing. This will ensure proper interaction with the npx command.
 
-After that finishes installing, your package.json file should include:
+- After that finishes installing, your package.json file should include:
 
+```
 {
   "devDependencies": {
 +   "@babel/cli": "^7.0.0",
 +   "@babel/core": "^7.0.0"
   }
 }
+```
 
 
-3Usage
-Instead of running Babel directly from the command line we're going to put our commands in npm scripts which will use our local version.
+## Usage
 
-Simply add a "scripts" field to your package.json and put the babel command inside there as build.
+- Instead of running Babel directly from the command line we're going to put our commands in npm scripts which will use our local version.
 
+- Simply add a "scripts" field to your package.json and put the babel command inside there as build.
+
+```
   {
     "name": "my-project",
     "version": "1.0.0",
@@ -44,32 +48,40 @@ Simply add a "scripts" field to your package.json and put the babel command insi
       "@babel/cli": "^7.0.0"
     }
   }
-
-
+```
 - Now from our terminal we can run:
 
+```
 npm run build
+```
 
-Copy
-This will run Babel the same way as before and the output will be present in lib directory, only now we are using a local copy.
 
-Alternatively, you can reference the babel cli inside of node_modules.
+- This will run Babel the same way as before and the output will be present in lib directory, only now we are using a local copy.
 
+- Alternatively, you can reference the babel cli inside of node_modules.
+
+```
 ./node_modules/.bin/babel src -d lib
+```
 
-Copy
-For full documentation on the Babel CLI see the usage docs.
 
-4Create babel.config.json configuration file
-Great! You've configured Babel but you haven't made it actually do anything. Create a babel.config.json config in your project root and enable some presets.
+- For full documentation on the Babel CLI see the usage docs.
 
-To start, you can use the env preset, which enables transforms for ES2015+
+## Create babel.config.json configuration file
 
+- Great! You've configured Babel but you haven't made it actually do anything. Create a babel.config.json config in your project root and enable some presets.
+
+- To start, you can use the env preset, which enables transforms for ES2015+
+
+```
 npm install @babel/preset-env --save-dev
+```
 
-Copy
-In order to enable the preset you have to define it in your babel.config.json file, like this:
 
+- In order to enable the preset you have to define it in your babel.config.json file, like this:
+
+```
 {
   "presets": ["@babel/preset-env"]
 }
+```
