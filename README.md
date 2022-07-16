@@ -12,7 +12,9 @@
 
 - We can install Babel CLI locally by running:
 
+```
 npm install --save-dev @babel/core @babel/cli
+```
 
 
 Note: If you do not have a package.json, create one before installing. This will ensure proper interaction with the npx command.
